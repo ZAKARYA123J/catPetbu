@@ -7,7 +7,7 @@ function Card2(props) {
   const [data1, setdata1] = useState(data.id);
 
   return (<div >
-    <div className="w-48 bg-white shadow rounded m-2" >
+    <div className="w-64 bg-white shadow rounded m-2" >
       <div
         className="h-40 w-full bg-gray-200 flex flex-col justify-between p-3 bg-cover bg-center"
         style={{ background:'center no-repeat',
