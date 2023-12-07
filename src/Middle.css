@@ -1,0 +1,57 @@
+/* Middle.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+}
+
+.middle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.background-container {
+  background: url('./krallepet-antalya.webp') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+}
+
+.text-container {
+  color: white;
+  padding: 20px;
+}
+
+/* Adjust the width for smaller screens */
+.welcomeparagraphe {
+  width: 100%;
+  /* Use word-wrap to prevent overflow */
+  word-wrap: break-word;
+}
+
+/* Additional styling for title and paragraph if needed */
+.text-container h2 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .middle {
+    display: none;
+  }
+
+  .background-container {
+    background-size: cover;
+    height: 50vh;
+  }
+}
+    
+    
