@@ -1,63 +1,163 @@
- export default function Contact(){
+import React,{useState,useEffect} from 'react';
+import axios from 'axios';
+import {
+  Box,
+  Input,
+  Button,
+  InputGroup,
+  InputLeftAddon,
+  FormControl,
+  FormLabel,
+  Textarea,
+  ChakraProvider,
+  extendTheme,
+  CSSReset,
+  Center,
+  Heading,
+} from '@chakra-ui/react';
 
-return(<section className="py-6 bg-gray-100 text-gray-900">
-<div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-    <div className="py-6 md:py-0 md:px-6">
-        <h1 className="text-4xl font-bold">Get in touch</h1>
-        <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
-        <div className="space-y-4">
-            <p className="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
-                </svg>
-                <span>Fake address, 9999 City</span>
-            </p>
-            <p className="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-                </svg>
-                <span>123456789</span>
-            </p>
-            <p className="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                </svg>
-                <span>contact@business.com</span>
-            </p>
-        </div>
+const theme = extendTheme({
+  components: {
+    Box: {
+      baseStyle: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh', // 100% of the viewport height
+        padding: '2rem',
+        maxWidth: '400px',
+        margin: 'auto',
+        backgroundColor: 'gray.100',
+        borderRadius: '8px',
+        boxShadow: 'md',
+      },
+    },
+    Heading: {
+      baseStyle: {
+        marginBottom: '1rem',
+      },
+    },
+    InputGroup: {
+      baseStyle: {
+        marginBottom: '1rem', // Add space between input groups
+        width: '100%', // Set width to 100%
+      },
+    },
+    InputLeftAddon: {
+      baseStyle: {
+        backgroundColor: 'gray.50',
+        borderRadius: '8px 0 0 8px',
+      },
+    },
+    Input: {
+      baseStyle: {
+        borderColor: 'gray.300',
+        borderRadius: '0 8px 8px 0',
+        width: '100%', // Set width to 100%
+      },
+      defaultProps: {
+        focusBorderColor: 'teal.400',
+      },
+    },
+    Textarea: {
+      baseStyle: {
+        borderColor: 'gray.300',
+        width: '100%', // Set width to 100%
+      },
+      defaultProps: {
+        focusBorderColor: 'teal.400',
+      },
+    },
+    Button: {
+      baseStyle: {
+        color: 'white',
+        backgroundColor: 'teal.400',
+        _hover: {
+          backgroundColor: 'teal.500',
+        },
+      },
+    },
+  },
+});
+
+
+const ReservationForm = () => {
+
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+  const [reference, setReference] = useState('');
+  const [message, setMessage] = useState('');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await axios.post('https://zakarya.onrender.com/Reservation', {
+        name: name,
+        email: email,
+        reference: reference,
+        number: number,
+        message: message,
+      });
+
+      setName('');
+      setEmail('');
+      setNumber('');
+      setReference('');
+      setMessage('');
+      
+      alert('Book successfully');
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error occurred while booking');
+    }
+  };
+
+  return (
+    <div style={{ margin: '20px' }}>
+      <ChakraProvider theme={theme}>
+        <CSSReset />
+        <Box>
+          <Center>
+            <Heading as="h1" size="lg" mb={4}>
+              Reservation Form
+            </Heading>
+          </Center>
+          <form onSubmit={handleSubmit} style={{ border: '1px solid black', padding: '4px', borderRadius: '4px' }}>
+            <InputGroup>
+              <InputLeftAddon children='email' />
+              <Input onChange={(e) => setEmail(e.target.value)} color='teal' type='text' placeholder='add email' />
+            </InputGroup>
+            <br />
+            <InputGroup>
+              <InputLeftAddon children='Full name' />
+              <Input onChange={(e) => setName(e.target.value)} color='teal' type='text' placeholder='add your name' />
+            </InputGroup>
+            <br />
+            <InputGroup>
+              <InputLeftAddon children='+212' />
+              <Input onChange={(e) => setNumber(e.target.value)} color='teal' type='tel' placeholder='phone number' />
+            </InputGroup>
+            <br />
+            <InputGroup>
+              <InputLeftAddon children='Reference' />
+              <Input color='teal' onChange={(e) => setReference(e.target.value)} type="text" placeholder="Reference Number" required />
+            </InputGroup>
+            <br />
+            <InputGroup>
+              <InputLeftAddon children='Message' />
+              <Textarea onChange={(e) => setMessage(e.target.value)} placeholder="Your Message" rows={4} />
+            </InputGroup>
+            <br />
+            <Center>
+              <Button type="submit">Reserve Now</Button>
+            </Center>
+          </form>
+        </Box>
+      </ChakraProvider>
     </div>
-    <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
-          <label className="block">
-            <span className="mb-1">Full name</span>
-            <input
-              type="text"
-              placeholder="Leroy Jenkins"
-              className="block w-full rounded-md border border-gray-300 shadow-sm focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none bg-gray-100 px-4 py-2"
-            />
-          </label>
-          <label className="block">
-            <span className="mb-1">Email address</span>
-            <input
-              type="email"
-              placeholder="leroy@jenkins.com"
-              className="block w-full rounded-md border border-gray-300 shadow-sm focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none bg-gray-100 px-4 py-2"
-            />
-          </label>
-          <label className="block">
-            <span className="mb-1">Message</span>
-            <textarea
-              rows="3"
-              className="block w-full rounded-md border border-gray-300 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none bg-gray-100 px-4 py-2"
-            ></textarea>
-          </label>
-          <button
-            type="button"
-            className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:outline-none hover:outline-none focus:ring-blue-500 focus:ring-opacity-50 bg-sky-600 text-gray-50 hover:bg-sky-700"
-          >
-            Submit
-          </button>
-        </form>
-</div>
-</section>)
-}
+  );
+};
+
+export default ReservationForm;

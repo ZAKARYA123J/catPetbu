@@ -1,7 +1,7 @@
 import {React,useEffect,useState} from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Contact from './Contact';
+import ReservationForm from './Contact';
 import Navbar2 from './Navbar2';
 import Wbutton from './whatsapp';
 import Footer from './footer';
@@ -45,7 +45,7 @@ function App() {
       <Navbar2 />
       <Routes>
         <Route path="/" element={<Middle/>} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/ReservationForm" element={<ReservationForm/> } />
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Products" element={<Products data={jsonData} />} />
