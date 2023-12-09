@@ -43,6 +43,13 @@ function App() {
   return (
 
     <>
+      <Helmet>
+          <title>PetBu</title>
+          <meta
+            name="description"
+            content="Discover a wide array of cat supplies, including premium cat food, comfortable bedding, interactive toys, grooming essentials, and stylish accessories. Whether you have a playful kitten or a sophisticated senior cat, our curated selection ensures that you find everything necessary for their comfort and joy."
+          />
+        </Helmet>
       <Navbar2 />
       <Routes>
         <Route path="/" element={<Middle/>} />
@@ -78,11 +85,6 @@ function App() {
         <div className="flex flex-wrap ">
          
         </div>
-        <Helmet>
-      <title>PetBu</title>
-      <meta name="Discover a wide array of cat supplies, including premium cat food, comfortable bedding, interactive toys, grooming essentials, and stylish accessories. Whether you have a playful kitten or a sophisticated senior cat, our curated selection ensures that you find everything necessary for their comfort and joy." 
-      content="cat petbu" />
-    </Helmet>
         </>
      
       
