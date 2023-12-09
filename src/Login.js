@@ -7,6 +7,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const [error, setError] = useState('');
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -29,18 +30,19 @@ const Login = () => {
     
             console.log(result);
     
-            if (result.data === "success") {
+            if (result.data === "Success") {
                 alert('Success');
                 navigate('/Products');
             }
         } catch (error) {
-            // Handle error, e.g., display error message
+            setError('Login failed. Please check your credentials.');
             console.error('Login failed:', error);
-        }
+         }
     }
     
     return (
         <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
+            {error && <p className="text-red-500">{error}</p>}
             <div className="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1">
                 <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
                     <div>

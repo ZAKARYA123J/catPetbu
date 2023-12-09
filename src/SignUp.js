@@ -2,30 +2,34 @@ import React,{useState,useEffect} from 'react';
 import axios from 'axios'
 
 const SignUp = () => {
-  const [name, setName]=useState('');
-  const [password, setPassword]=useState('');
-  const [email, setEmail]=useState('');
-  const [error,setEror]=useState('')
-  const handlesubmi= async(e)=>{
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!name || !password || !email){
-      setEror('pleas fill in all field ')
+    if (!name || !password || !email) {
+      setError('Please fill in all fields');
+      return; // Prevent further execution if there is an error
     }
-    try{
-      await axios.post('https://zakarya.onrender.com/sign',{
-        name:name,
-        email:email,
-        password:password
+
+    try {
+      await axios.post('https://zakarya.onrender.com/sign', {
+        name: name,
+        email: email,
+        password: password,
       });
+
       setName('');
       setEmail('');
       setPassword('');
-      setEror('');
-      alert('succes')
-    }catch(error){
-      console.log('error')
+      setError('');
+      alert('Success');
+    } catch (error) {
+      console.error('Error:', error);
     }
-  }
+  };
   return (
     <>
       <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
@@ -65,6 +69,7 @@ const SignUp = () => {
                       <input onChange={(e)=>{setName(e.target.value)}} type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="John" />
                     </div>
                   </div>
+                  {error && <p className="text-red-500">{error}</p>}
                   <div className="w-1/2 px-3 mb-5">
                     <label htmlFor="" className="text-xs font-semibold px-1">Last name</label>
                     <div className="flex">
@@ -93,7 +98,7 @@ const SignUp = () => {
                 </div>
                 <div className="flex -mx-3">
                   <div className="w-full px-3 mb-5">
-                    <button onClick={handlesubmi} className="block w-full max-w-xs mx-auto bg-gray-800 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
+                    <button onClick={handleSubmit} className="block w-full max-w-xs mx-auto bg-gray-800 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
                   </div>
                 </div>
               </div>
