@@ -11,6 +11,7 @@ import './Logo.png';
 import Productinfo from './Productinfo';
 import SignUp from './SignUp';
 import Middle from './Middle';
+import {Helmet} from 'react-helmet'
 function App() {
   const [jsonData, setJsonData] = useState(null);
   
@@ -76,7 +77,13 @@ function App() {
       
         <div className="flex flex-wrap ">
          
-        </div></>
+        </div>
+        <Helmet>
+      <title>PetBu</title>
+      <meta name="Discover a wide array of cat supplies, including premium cat food, comfortable bedding, interactive toys, grooming essentials, and stylish accessories. Whether you have a playful kitten or a sophisticated senior cat, our curated selection ensures that you find everything necessary for their comfort and joy." 
+      content="cat petbu" />
+    </Helmet>
+        </>
      
       
       <Wbutton number="+212688880009" />
