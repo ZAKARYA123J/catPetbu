@@ -124,7 +124,7 @@ const ReservationForm = () => {
               Reservation Form
             </Heading>
           </Center>
-          <form onSubmit={handleSubmit} style={{ border: '1px solid black', padding: '4px', borderRadius: '4px' }}>
+          <form onSubmit={handleSubmit} >
             <InputGroup>
               <InputLeftAddon children='email' />
               <Input onChange={(e) => setEmail(e.target.value)} color='teal' type='text' placeholder='add email' />
