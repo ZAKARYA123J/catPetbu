@@ -23,30 +23,8 @@
   "image": "1113a.jpg",
   "price": 199
 },
-{
-  "id": "N1114",
-  "sisal": "Tapis et peluche",
-  "description": ["Pour accrocher ou se coucher"],
-  "dimension": ["dimensions: '70 × 45 cm'"],
-  "image": "1114a.jpg",
-  "price": 199
-},
-{
-  "id": "N1115",
-  "couleur": "beige ou marron clair",
-  "sisal": "ø 4 mm et peluche",
-  "dimension": ["surface_au_sol: '25 × 45 cm', hauteur: '40cm'"],
-  "image": "1115a.jpg",
-  "price": 383
-},
-{
-  "id": "N1116",
-  "couleur": "beige et gris",
-  "sisal": "Tapis et peluche",
-  "dimension": ["dimensions: '30× 17 × 50 cm'"],
-  "image": "1116a.jpg",
-  "price": 329
-},
+
+
 {
   "id": "N1117",
   "sisal": "Tapis et peluche",
@@ -55,14 +33,7 @@
   "image": "1117a.jpg",
   "price": 329
 },
-{
-  "id": "N1118",
-  "sisal": "Tapis et polaire",
-  "description": ["Dos recouvert de polaire Pour montage mural"],
-  "dimension": ["dimensions: '50 × 70cm'"],
-  "image": "1118a.jpg",
-  "price": 329
-},
+
 {
   "id": "N1119",
   "couleur": "beige et gris",
@@ -111,16 +82,7 @@
     "image": "1123a.jpg",
     "price": 219
   },
-  {
-    "id": "N1124",
-    "couleur": "beige Et Gris",
-    "sisal": "Tapis et peluche",
-    "description": ["Dos recouvert de peluche Pour accrocher"],
-    "reference": 1124,
-    "dimension": ["dimensions: '30 × 60 cm'"],
-    "image": "1124a.jpg",
-    "price": 274
-  },
+
   {
     "id": "N1125",
     "sisal": "Tapis et peluche",
@@ -148,15 +110,7 @@
     "image": "1127a.jpg",
     "price": 109
   },
-  {
-    "id": "N1128",
-    "sisal": "Tapis et peluche",
-    "description": ["Dos recouvert de peluche Pour accrocher"],
-    "reference": 1128,
-    "dimension": ["dimensions: '25× 50 cm'"],
-    "image": "1128a.jpg",
-    "price": 165
-  },
+
   {
     "id": "N1129",
     "sisal": "Tapis et peluche",
@@ -175,56 +129,10 @@
     "image": "1130a.jpg",
     "price": 1316
   },
-  {
-    "id": "N1131",
-    "couleur": "beige Et Gris",
-    "sisal": "Tapis et peluche",
-    "description": ["Grotte équipée de peluche Plaque de couchage rembourrée"],
-    "reference": 1131,
-    "dimension": ["surface_au_sol: 'ø 50cm', hauteur: '100 cm'"],
-    "image": "1131a.jpg",
-    "price": 3291
-  },
-  {
-    "id": "N1132",
-    "couleur": "beige et gris",
-    "sisal": "Tapis et peluche",
-    "description": ["Grotte équipée de peluche Plaque de couchage rembourrée"],
-    "reference": 1132,
-    "dimension": {"surface_au_sol": "ø 50cm", "hauteur": "120 cm"},
-    "image": "1132a.jpg",
-    "price": 2194
-  },
-  {
-    "id": "N1133",
-    "couleur": "beige Et Gris clair",
-    "sisal": "Tapis et peluche",
-    "description": ["Grotte entièrement équipée avec peluche Avec 5 coussins réversibles"],
-    "reference": 1133,
-    "dimension": ["surface_au_sol: '39 × 39 cm', hauteur: '80 cm'"],
-    "image": "1133a.jpg",
-    "price": 3291
-  },
-  {
-    "id": "N1134",
-    "couleur": "Gris Et Gris Foncé",
-    "sisal": "ø 6 mm et peluche",
-    "description": ["Grotte équipée de peluche, polaire et coussin réversible Plateau inclinable avec lit douillet amovible et coussin réversible"],
-    "reference": 1134,
-    "dimension": ["surface_au_sol: '55 × 45 cm', hauteur: '135 cm'"],
-    "image": "1134a.jpg",
-    "price": 2742
-  },
-  {
-    "id": "N1135",
-    "couleur": "Gris Et Gris Foncé",
-    "sisal": "Tissu tissé et peluche",
-    "description": ["Grotte entièrement équipée avec peluche Avec 3 coussins réversibles"],
-    "reference": 1135,
-    "dimension": ["surface_au_sol: '39 × 39 cm', hauteur: '80 cm'"],
-    "image": "1135a.jpg",
-    "price": 1645
-  },
+ 
+ 
+
+
   {
     "id": "N1136",
     "couleur": "taupe Et beige",
@@ -265,16 +173,7 @@
     "image": "1139a.jpg",
     "price": 822
   },
-  {
-    "id": "N1140",
-    "couleur": "beige ou gris",
-    "sisal": "Tapis, peluche cheveux longs et Velours",
-    "description": ["Grottes équipées de peluche à poils longs et de molleton Lit douillet avec bord rembourré Surfaces de couchage rembourrées"],
-    "reference": 1140,
-    "dimension": ["surface_au_sol: 'ø 50 cm', hauteur: '120 cm'"],
-    "image": "1140a.jpg",
-    "price": 2951
-  },
+ 
   {
     "id": "N1141",
     "couleur": "beige",
@@ -315,16 +214,7 @@
     "image": "1144a.jpg",
     "price": 987
   },
-  {
-    "id": "N1145",
-    "couleur": "beige et gris ou gris et noir",
-    "sisal": "ø 6 mm et peluche",
-    "description": ["Surface de couchage rembourrée"],
-    "reference": 1145,
-    "dimension": ["surface_au_sol: '36 × 36 cm', hauteur: '55 cm'"],
-    "image": "1145a.jpg",
-    "price": 275
-  },
+  
   {
     "id": "N1146",
     "couleur": "beige ou gris",
@@ -830,29 +720,6 @@
     "dimension": ["surface_au_sol: '85 × 55 cm', hauteur: '95 cm'"],
     "image": "1195a.jpg",
     "price": 3060
-  },
-  {
-    "id": "N1196",
-    "couleur": "Blanc-Gris",
-    "sisal": "ø 6 mm et peluche",
-    "description": [
-      "Grotte équipée de polaire Lit douillet avec bord rembourré Avec 3 coussins réversibles Plaque de fond épaisse"
-    ],
-    "reference": 1196,
-    "dimension": ["surface_au_sol: '85 × 55 cm', hauteur: '95 cm '"],
-    "image": "1196a.jpg",
-    "price": 2578
-  },
-  {
-    "id": "N1197",
-    "couleur": "Gris",
-    "sisal": "ø 6 mm et Tissu D'ameublement",
-    "description": ["Grotte équipée de molleton et coussin réversible Avec tendeur de plafond Plaque de couchage rembourrée Hamac amovible Plaque de fond lourde"
-    ],
-    "reference": 1197,
-    "dimension": ["surface_au_sol: '59 × 59 cm', hauteur: '221-250 cm'"],
-    "image": "1197a.jpg",
-    "price": 2983
   }
   
 ]
