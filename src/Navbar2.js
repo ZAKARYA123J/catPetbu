@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
-
-
+import img from './Logol.jpg'
+import img2 from './R.jpeg'
+import img3 from './flag-o.jpg'
 const Navbar2 = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const toggleDropdown = () => {
@@ -25,14 +26,16 @@ const Navbar2 = () => {
   return (
     <>
       <header className="bg-white">
-        <div className="container mx-auto px-8 py-4 flex items-center">
+        <div className=" mx-auto px-8 py-4 flex items-center">
           <a href='/'>
-          <div className="mr-auto md:w-48 flex-shrink-0">
-            <img className="h-8 md:h-12" src='logo2.png' alt="logo" />
+          <div style={{display:'flex'}}>
+            <img className="h-8 md:h-12" style={{marginRight:'10px'}} src={img2} alt="logo" />
+            <img className="h-8 md:h-12" style={{marginRight:'10px'}} src={img} alt="logo" />
+            <img className="h-8 md:h-12" src={img3} alt="logo" />
           </div></a>
 
          
-          <div className="test hidden md:flex">
+          <div className="test hidden md:flex" style={{marginLeft:'30px'}}>
             <ul className="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
               <li>
                 <Link to="/" className="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none" aria-current="page">

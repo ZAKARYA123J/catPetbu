@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaTiktok } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-
+import img from './Logol.jpg'
 function Footer(){
 return(
     <footer className="px-4 divide-y dark:bg-gray-800 dark:text-gray-100">
@@ -13,7 +13,7 @@ return(
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-900">
                     
 					</svg>
-                    <img src='logo2.png' alt="lgo" />
+                    <img src={img} alt="lgo" />
 				</div>
 				<span className="self-center text-2xl font-semibold">PetBu</span>
 			</a>

@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
-
+import img from './Logol.jpg'
 import { Link,useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -47,8 +47,8 @@ const Login = () => {
                 <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
                     <div>
                         <img
-                            src={require('./Logo.png')}
-                            className="w-28 h-28 mx-auto"
+                            src={img}
+                            className=" h-28 mx-auto"
                             alt="Logo"
                         />
                     </div>
