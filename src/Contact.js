@@ -15,7 +15,7 @@ import {
   Center,
   Heading,
 } from '@chakra-ui/react';
-
+import {useNavigate} from 'react-router-dom'
 const theme = extendTheme({
   components: {
     Box: {
@@ -89,6 +89,7 @@ const ReservationForm = () => {
   const [number, setNumber] = useState('');
   const [reference, setReference] = useState('');
   const [message, setMessage] = useState('');
+  const navigate=useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -107,7 +108,7 @@ const ReservationForm = () => {
       setReference('');
       setMessage('');
       
-      alert('Book successfully');
+      navigate('/succs')
     } catch (error) {
       console.error('Error:', error);
       alert('Error occurred while booking');

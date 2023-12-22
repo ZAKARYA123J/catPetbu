@@ -12,6 +12,7 @@ import Productinfo from './Productinfo';
 import SignUp from './SignUp';
 import Middle from './Middle';
 import {Helmet} from 'react-helmet'
+import ReservationSuccess from './succes';
 function App() {
   const [jsonData, setJsonData] = useState(null);
   
@@ -55,6 +56,7 @@ function App() {
         <Route path="/" element={<Middle/>} />
         <Route path="/ReservationForm" element={<ReservationForm/> } />
         <Route path="/Login" element={<Login />} />
+        <Route path='/succs' element={<ReservationSuccess/>}/>
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Products" element={<Products data={jsonData} />} />
         <Route path="/Productinfo/:data1" element={<Productinfo  />} />
