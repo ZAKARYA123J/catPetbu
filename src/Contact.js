@@ -14,6 +14,7 @@ import {
   CSSReset,
   Center,
   Heading,
+  Flex
 } from '@chakra-ui/react';
 import {useNavigate} from 'react-router-dom'
 const theme = extendTheme({
@@ -116,48 +117,52 @@ const ReservationForm = () => {
   };
 
   return (
-    <div style={{ margin: '20px' }}>
-      <ChakraProvider theme={theme}>
-        <CSSReset />
-        <Box>
-          <Center>
-            <Heading as="h1" size="lg" mb={4}>
-              Reservation Form
-            </Heading>
-          </Center>
-          <form onSubmit={handleSubmit} >
-            <InputGroup>
-              <InputLeftAddon children='email' />
-              <Input onChange={(e) => setEmail(e.target.value)} color='teal' type='text' placeholder='add email' />
-            </InputGroup>
-            <br />
-            <InputGroup>
-              <InputLeftAddon children='Full name' />
-              <Input onChange={(e) => setName(e.target.value)} color='teal' type='text' placeholder='add your name' />
-            </InputGroup>
-            <br />
-            <InputGroup>
-              <InputLeftAddon children='+212' />
-              <Input onChange={(e) => setNumber(e.target.value)} color='teal' type='tel' placeholder='phone number' />
-            </InputGroup>
-            <br />
-            <InputGroup>
-              <InputLeftAddon children='Reference' />
-              <Input color='teal' onChange={(e) => setReference(e.target.value)} type="text" placeholder="Reference Number" required />
-            </InputGroup>
-            <br />
-            <InputGroup>
-              <InputLeftAddon children='Message' />
-              <Textarea onChange={(e) => setMessage(e.target.value)} placeholder="Your Message" rows={4} />
-            </InputGroup>
-            <br />
+    
+<div style={{ margin: '20px' }}>
+  <ChakraProvider theme={theme}>
+    <CSSReset />
+    <Center>
+    
+      <Box width="50%">
+      <Heading  as="h1" size="lg" mb={4} textAlign="center">
+          Reservation Form
+        </Heading>
+        <form onSubmit={handleSubmit}>
+          <Box>
+            <FormControl>
+              <FormLabel>Email</FormLabel>
+              <Input onChange={(e) => setEmail(e.target.value)} color='teal' type='text' placeholder='Add email' />
+            </FormControl>
+            
+            <FormControl>
+              <FormLabel>Full name</FormLabel>
+              <Input onChange={(e) => setName(e.target.value)} color='teal' type='text' placeholder='Add your name' />
+            </FormControl>
+            
+            <FormControl>
+              <FormLabel>Phone number</FormLabel>
+              <Input onChange={(e) => setNumber(e.target.value)} color='teal' type='tel' placeholder='Add phone number' />
+            </FormControl>
+            
+            <FormControl>
+              <FormLabel>Reference Number</FormLabel>
+              <Input color='teal' onChange={(e) => setReference(e.target.value)} type="text" placeholder="Add Reference Number" required />
+            </FormControl>
+            
+            <FormControl>
+              <FormLabel>Your Message</FormLabel>
+              <Textarea onChange={(e) => setMessage(e.target.value)} placeholder="Add your message" rows={4} />
+            </FormControl>
+            
             <Center>
               <Button type="submit">Reserve Now</Button>
             </Center>
-          </form>
-        </Box>
-      </ChakraProvider>
-    </div>
+          </Box>
+        </form>
+      </Box>
+    </Center>
+  </ChakraProvider>
+</div>
   );
 };
 
