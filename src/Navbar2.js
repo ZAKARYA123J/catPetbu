@@ -29,9 +29,9 @@ const Navbar2 = () => {
         <div className=" mx-auto px-8 py-4 flex items-center">
           <a href='/'>
           <div style={{display:'flex'}}>
-            <img className="h-8 md:h-12" style={{marginRight:'10px'}} src={img2} alt="logo" />
-            <img className="h-8 md:h-12" style={{marginRight:'10px'}} src={img} alt="logo" />
-            <img className="h-8 md:h-12" src={img3} alt="logo" />
+            <img className="h-8 md:h-8" style={{marginRight:'10px'}} src={img2} alt="logo" />
+            <img className="h-8 md:h-8" style={{marginRight:'10px'}} src={img} alt="logo" />
+            <img className="h-8 md:h-8" src={img3} alt="logo" />
           </div></a>
 
          
