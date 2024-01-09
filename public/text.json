@@ -345,16 +345,6 @@
     "image": "1158a.jpg",
     "price": 2073
   },
-  {
-    "id": "N1159",
-    "couleur": "beige ou gris",
-    "sisal": "ø 6 mm et peluche",
-    "description": ["Grotte équipée d'une couverture en peluche Plateau inclinable avec lit douillet amovible Avec 2 coussins réversibles"],
-    "reference": 1159,
-    "dimension": ["surface_au_sol: 'ø 60 cm', hauteur: '140 cm'"],
-    "image": "1159a.jpg",
-    "price": 2183
-  },
 {
   "id": "N1160",
   "sisal": "ø 6 mm et peluche",
@@ -396,16 +386,6 @@
   "price": 1415
 },
 {
-  "id": "N1164",
-  "sisal": "ø 6 mm / peluche",
-  "description": ["Grotte équipée de peluche et polaire Plateau inclinable avec lit douillet amovible"],
-  "couleur": "beige ou gris",
-  "reference": 1164,
-  "dimension": ["surface_au_sol: '46 × 46 cm', hauteur: '149 cm'"],
-  "image": "1164a.jpg",
-  "price": 1305
-},
-{
   "id": "N1165",
   "sisal": "ø 6 mm et peluche",
   "description": ["Grotte équipée de peluche et polaire"],
@@ -434,16 +414,6 @@
   "dimension": ["surface_au_sol: '40 × 40 cm', hauteur: '110 cm'"],
   "image": "1167a.jpg",
   "price": 987
-},
-{
-  "id": "N1168",
-  "sisal": "ø 6 mm, Tissu tissé et peluche",
-  "description": ["Avec lit douillet amovible Plaque de fond épaisse"],
-  "couleur": "beige",
-  "reference": 1168,
-  "dimension": ["surface_au_sol: 'ø 50 cm', hauteur: '100 cm'"],
-  "image": "1168a.jpg",
-  "price": 1086
 },
 {
   "id": "N1169",
@@ -555,16 +525,7 @@
     "image": "1179a.jpg",
     "price": 4048
   },
-  {
-    "id": "N1180",
-    "couleur": "anthracite, noir ou beige",
-    "sisal": "ø 6 mm et peluche",
-    "description": ["Grotte équipée de peluche et polaire Lit douillet avec bord rembourré et coussin réversible Hamac amovible Plaque de fond épaisse"],
-    "reference": 1180,
-    "dimension": ["surface_au_sol: '91 × 61 cm', hauteur: '165 cm'"],
-    "image": "1180a.jpg",
-    "price": 3828
-  },
+
   {
     "id": "N1181",
     "couleur": "Gris clair ou beige",
@@ -696,30 +657,6 @@
     "dimension": ["surface_au_sol: '79 × 79 cm', hauteur: '175 cm'"],
     "image": "1193a.jpg",
     "price": 4157
-  },
-  {
-    "id": "N1194",
-    "couleur": "Gris clair",
-    "sisal": "ø 6 mm et peluche cheveux longs",
-    "description": [
-      "Grotte équipée de polaire Lits confortables avec bord rembourré Avec 3 coussins réversibles Plaque de fond épaisse"
-    ],
-    "reference": 1194,
-    "dimension": ["surface_au_sol: '85 × 55 cm', hauteur: '135 cm'"],
-    "image": "1194a.jpg",
-    "price": 4377
-  },
-  {
-    "id": "N1195",
-    "couleur": "Gris clair",
-    "sisal": "ø 6 mm et peluche cheveux longs",
-    "description": [
-      "Lits confortables avec bord rembourré Avec 2 coussins réversibles Plaque de fond épaisse"
-    ],
-    "reference": 1195,
-    "dimension": ["surface_au_sol: '85 × 55 cm', hauteur: '95 cm'"],
-    "image": "1195a.jpg",
-    "price": 3060
   }
   
 ]
