@@ -1,11 +1,9 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import {
   Box,
   Input,
   Button,
-  InputGroup,
-  InputLeftAddon,
   FormControl,
   FormLabel,
   Textarea,
@@ -14,9 +12,9 @@ import {
   CSSReset,
   Center,
   Heading,
-  Flex
 } from '@chakra-ui/react';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 const theme = extendTheme({
   components: {
     Box: {
@@ -25,7 +23,7 @@ const theme = extendTheme({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100vh', // 100% of the viewport height
+        height: '100vh',
         padding: '2rem',
         maxWidth: '400px',
         margin: 'auto',
@@ -37,25 +35,18 @@ const theme = extendTheme({
     Heading: {
       baseStyle: {
         marginBottom: '1rem',
+        color: 'teal.400',
       },
     },
-    InputGroup: {
+    FormControl: {
       baseStyle: {
-        marginBottom: '1rem', // Add space between input groups
-        width: '100%', // Set width to 100%
-      },
-    },
-    InputLeftAddon: {
-      baseStyle: {
-        backgroundColor: 'gray.50',
-        borderRadius: '8px 0 0 8px',
+        marginBottom: '1rem',
       },
     },
     Input: {
       baseStyle: {
         borderColor: 'gray.300',
-        borderRadius: '0 8px 8px 0',
-        width: '100%', // Set width to 100%
+        borderRadius: '8px',
       },
       defaultProps: {
         focusBorderColor: 'teal.400',
@@ -64,7 +55,7 @@ const theme = extendTheme({
     Textarea: {
       baseStyle: {
         borderColor: 'gray.300',
-        width: '100%', // Set width to 100%
+        borderRadius: '8px',
       },
       defaultProps: {
         focusBorderColor: 'teal.400',
@@ -82,25 +73,24 @@ const theme = extendTheme({
   },
 });
 
-
 const ReservationForm = () => {
-
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [reference, setReference] = useState('');
   const [message, setMessage] = useState('');
-  const navigate=useNavigate()
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       await axios.post('https://zakarya.onrender.com/Reservation', {
-        name: name,
-        email: email,
-        reference: reference,
-        number: number,
-        message: message,
+        name,
+        email,
+        reference,
+        number,
+        message,
       });
 
       setName('');
@@ -108,8 +98,8 @@ const ReservationForm = () => {
       setNumber('');
       setReference('');
       setMessage('');
-      
-      navigate('/succs')
+
+      navigate('/succs');
     } catch (error) {
       console.error('Error:', error);
       alert('Error occurred while booking');
@@ -117,52 +107,64 @@ const ReservationForm = () => {
   };
 
   return (
-    
-<div style={{ margin: '20px' }}>
-  <ChakraProvider theme={theme}>
-    <CSSReset />
-    <Center>
-    
-      <Box width="50%">
-      <Heading  as="h1" size="lg" mb={4} textAlign="center">
-          Reservation Form
-        </Heading>
-        <form onSubmit={handleSubmit}>
-          <Box>
+      <Center>
+        <Box width="50%">
+          <Heading as="h1" size="lg" mb={4} textAlign="center">
+            Reservation Form
+          </Heading>
+          <form onSubmit={handleSubmit}>
             <FormControl>
               <FormLabel>Email</FormLabel>
-              <Input onChange={(e) => setEmail(e.target.value)} color='teal' type='text' placeholder='Add email' />
+              <Input
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="Add email"
+              />
             </FormControl>
-            
+
             <FormControl>
               <FormLabel>Full name</FormLabel>
-              <Input onChange={(e) => setName(e.target.value)} color='teal' type='text' placeholder='Add your name' />
+              <Input
+                onChange={(e) => setName(e.target.value)}
+                type="text"
+                placeholder="Add your name"
+              />
             </FormControl>
-            
+
             <FormControl>
               <FormLabel>Phone number</FormLabel>
-              <Input onChange={(e) => setNumber(e.target.value)} color='teal' type='tel' placeholder='Add phone number' />
+              <Input
+                onChange={(e) => setNumber(e.target.value)}
+                type="tel"
+                placeholder="Add phone number"
+              />
             </FormControl>
-            
+
             <FormControl>
               <FormLabel>Reference Number</FormLabel>
-              <Input color='teal' onChange={(e) => setReference(e.target.value)} type="text" placeholder="Add Reference Number" required />
+              <Input
+                onChange={(e) => setReference(e.target.value)}
+                type="text"
+                placeholder="Add Reference Number"
+                required
+              />
             </FormControl>
-            
+
             <FormControl>
               <FormLabel>Your Message</FormLabel>
-              <Textarea onChange={(e) => setMessage(e.target.value)} placeholder="Add your message" rows={4} />
+              <Textarea
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Add your message"
+                rows={4}
+              />
             </FormControl>
-            
+
             <Center>
               <Button type="submit">Reserve Now</Button>
             </Center>
-          </Box>
-        </form>
-      </Box>
-    </Center>
-  </ChakraProvider>
-</div>
+          </form>
+        </Box>
+      </Center>
   );
 };
 
