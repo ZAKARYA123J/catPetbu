@@ -13,7 +13,9 @@ import SignUp from './SignUp';
 import Middle from './Middle';
 import {Helmet} from 'react-helmet'
 import ReservationSuccess from './succes';
+import { ChakraProvider, CSSReset, Box, extendTheme } from '@chakra-ui/react';
 function App() {
+  const theme = extendTheme({})
   const [jsonData, setJsonData] = useState(null);
   
   const getData = () => {
@@ -44,6 +46,8 @@ function App() {
   return (
 
     <>
+    <ChakraProvider theme={theme}>
+  <CSSReset />
       <Helmet>
           <title>PetBu</title>
           <meta
@@ -92,6 +96,7 @@ function App() {
       
       <Wbutton number="+212688880009" />
       <Footer />
+      </ChakraProvider>
     </>
   );
 }
