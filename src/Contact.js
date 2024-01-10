@@ -109,16 +109,13 @@ const ReservationForm = () => {
   return (
       <Center>
         <Box width="50%">
-          <Heading as="h1" size="lg" mb={4} textAlign="center">
-            Reservation Form
-          </Heading>
           <form onSubmit={handleSubmit}>
             <FormControl>
               <FormLabel>Email</FormLabel>
               <Input
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                placeholder="Add email"
+                required
               />
             </FormControl>
 
@@ -127,7 +124,7 @@ const ReservationForm = () => {
               <Input
                 onChange={(e) => setName(e.target.value)}
                 type="text"
-                placeholder="Add your name"
+                required
               />
             </FormControl>
 
@@ -136,7 +133,7 @@ const ReservationForm = () => {
               <Input
                 onChange={(e) => setNumber(e.target.value)}
                 type="tel"
-                placeholder="Add phone number"
+                required
               />
             </FormControl>
 
@@ -144,8 +141,8 @@ const ReservationForm = () => {
               <FormLabel>Reference Number</FormLabel>
               <Input
                 onChange={(e) => setReference(e.target.value)}
-                type="text"
-                placeholder="Add Reference Number"
+                type="number"
+      
                 required
               />
             </FormControl>
@@ -154,7 +151,7 @@ const ReservationForm = () => {
               <FormLabel>Your Message</FormLabel>
               <Textarea
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Add your message"
+                required
                 rows={4}
               />
             </FormControl>
