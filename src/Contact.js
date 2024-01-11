@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+
 import {
   Box,
   Input,
@@ -7,6 +8,7 @@ import {
   FormControl,
   FormLabel,
   Textarea,
+  Stack,
   ChakraProvider,
   extendTheme,
   CSSReset,
@@ -15,63 +17,6 @@ import {
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
-const theme = extendTheme({
-  components: {
-    Box: {
-      baseStyle: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-        padding: '2rem',
-        maxWidth: '400px',
-        margin: 'auto',
-        backgroundColor: 'gray.100',
-        borderRadius: '8px',
-        boxShadow: 'md',
-      },
-    },
-    Heading: {
-      baseStyle: {
-        marginBottom: '1rem',
-        color: 'teal.400',
-      },
-    },
-    FormControl: {
-      baseStyle: {
-        marginBottom: '1rem',
-      },
-    },
-    Input: {
-      baseStyle: {
-        borderColor: 'gray.300',
-        borderRadius: '8px',
-      },
-      defaultProps: {
-        focusBorderColor: 'teal.400',
-      },
-    },
-    Textarea: {
-      baseStyle: {
-        borderColor: 'gray.300',
-        borderRadius: '8px',
-      },
-      defaultProps: {
-        focusBorderColor: 'teal.400',
-      },
-    },
-    Button: {
-      baseStyle: {
-        color: 'white',
-        backgroundColor: 'teal.400',
-        _hover: {
-          backgroundColor: 'teal.500',
-        },
-      },
-    },
-  },
-});
 
 const ReservationForm = () => {
   const [email, setEmail] = useState('');
@@ -110,18 +55,26 @@ const ReservationForm = () => {
       <Center>
         <Box width="50%">
           <form onSubmit={handleSubmit}>
-            <FormControl>
-              <FormLabel>Email</FormLabel>
-              <Input
-                onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                required
-              />
-            </FormControl>
+         {/* Use Stack component for vertical spacing */}
+         
+  <FormControl>
+    <FormLabel>Email</FormLabel>
+    <Input
+      variant='flushed'
+      borderBottom={'1px solid black'}
+      onChange={(e) => setEmail(e.target.value)}
+      type="email"
+      required
+    />
+  </FormControl>
+
+  {/* Add more FormControl components as needed */}
 
             <FormControl>
               <FormLabel>Full name</FormLabel>
               <Input
+              variant='flushed'
+            borderBottom={'1px solid black'}
                 onChange={(e) => setName(e.target.value)}
                 type="text"
                 required
@@ -131,6 +84,8 @@ const ReservationForm = () => {
             <FormControl>
               <FormLabel>Phone number</FormLabel>
               <Input
+                 variant='flushed'
+                 borderBottom={'1px solid black'}
                 onChange={(e) => setNumber(e.target.value)}
                 type="tel"
                 required
@@ -140,6 +95,8 @@ const ReservationForm = () => {
             <FormControl>
               <FormLabel>Reference Number</FormLabel>
               <Input
+                 variant='flushed'
+                 borderBottom={'1px solid black'}
                 onChange={(e) => setReference(e.target.value)}
                 type="number"
       
@@ -150,6 +107,8 @@ const ReservationForm = () => {
             <FormControl>
               <FormLabel>Your Message</FormLabel>
               <Textarea
+                 variant='flushed'
+                 borderBottom={'1px solid black'}
                 onChange={(e) => setMessage(e.target.value)}
                 required
                 rows={4}
