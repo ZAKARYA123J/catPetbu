@@ -1,12 +1,11 @@
 import { React, useState, useEffect } from "react";
 import { useParams ,Link} from "react-router-dom";
-
-
+import { useNavigate } from "react-router-dom";
 
 export default function Productinfo(props) {
   const { data1 } = useParams();
   const [jsonData, setJsonData] = useState(null);
-
+  const navigate =useNavigate();
   const getData = () => {
     fetch('/text.json', {
       headers: {
@@ -75,9 +74,12 @@ export default function Productinfo(props) {
                 <span className="text-2xl leading-none align-baseline"></span>
               </div>
               <div className="inline-block align-bottom">
-              <button style={{ paddingLeft: '10px' }} className="bg-yellow-300 opacity-75 hover:opacity-100 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold">
-  <i className="mdi mdi-cart -ml-2 mr-2"></i>
-  <Link to={`/Productinfo/${data1}/ReservationForm`}> BUY NOW</Link>
+              <button
+  style={{ paddingLeft: '10px' }}
+  className="bg-yellow-300 opacity-75 hover:opacity-100 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
+  onClick={() => navigate(`/Productinfo/${data1}/ReservationForm`)}
+>
+  <i className="mdi mdi-cart -ml-2 mr-2"></i> BUY NOW
 </button>
 
               </div>
