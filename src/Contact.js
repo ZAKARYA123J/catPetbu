@@ -98,7 +98,7 @@ const ReservationForm = () => {
                  variant='flushed'
                  borderBottom={'1px solid black'}
                 onChange={(e) => setReference(e.target.value)}
-                type="number"
+                type="text"
       
                 required
               />

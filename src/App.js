@@ -58,7 +58,7 @@ function App() {
       <Navbar2 />
       <Routes>
         <Route path="/" element={<Middle/>} />
-        <Route path="/ReservationForm" element={<ReservationForm/> } />
+        <Route path="/Productinfo/:data1/ReservationForm" element={<ReservationForm/> } />
         <Route path="/Login" element={<Login />} />
         <Route path='/succs' element={<ReservationSuccess/>}/>
         <Route path="/SignUp" element={<SignUp />} />
