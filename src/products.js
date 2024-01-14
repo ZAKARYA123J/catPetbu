@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Flex, Input, Button,Image } from "@chakra-ui/react";
+import { Box, Flex, Input, Button,Image,Avatar } from "@chakra-ui/react";
 import Search from "./search";
 import { CiSearch } from "react-icons/ci";
 import { FaSearch } from "react-icons/fa";
