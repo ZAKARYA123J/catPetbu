@@ -1,7 +1,7 @@
 
 import { React, useState, useEffect } from "react";
 import { useParams ,Link} from "react-router-dom";
-
+import { Button } from "@chakra-ui/react";
 
 
 export default function Productinfo(props) {
@@ -77,12 +77,7 @@ export default function Productinfo(props) {
               </div>
               <div className="inline-block align-bottom">
   <Link to={`/Productinfo/${data1}/ReservationForm`}>
-    <button
-      style={{ paddingLeft: '10px' }}
-      className="bg-yellow-300 opacity-75 hover:opacity-100 text-yellow-900  rounded-full px-10 py-2 font-semibold"
-    >
-      <i className="mdi mdi-cart -ml-2 mr-2"></i> BUY NOW
-    </button>
+    <Button>buy now</Button>
   </Link>
 </div>
 
