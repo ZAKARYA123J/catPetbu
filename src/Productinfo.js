@@ -75,7 +75,7 @@ export default function Productinfo(props) {
                 <span className="font-bold text-3xl leading-none align-baseline">{targetObject.price}</span>
                 <span className="text-2xl leading-none align-baseline"></span>
               </div>
-              <div style={{marginBottom:'px',marginLeft:'10px'}}  className="inline-block align-bottom">
+              <div style={{marginBottom:'8px',marginLeft:'10px'}}  className="inline-block align-bottom">
   <Link to={`/Productinfo/${data1}/ReservationForm`}>
     <Button colorScheme='yellow'>buy now<CiShoppingCart fontSize={'25px'}/></Button>
   </Link>
