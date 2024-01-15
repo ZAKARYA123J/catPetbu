@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { useParams } from 'react-router-dom';
 import {
   Box,
   Input,
@@ -21,6 +21,7 @@ import { useNavigate } from 'react-router-dom';
 const ReservationForm = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+  const { data1 } = useParams();
   const [number, setNumber] = useState('');
   const [reference, setReference] = useState('');
   const [message, setMessage] = useState('');
@@ -96,6 +97,7 @@ const ReservationForm = () => {
               <FormLabel>Reference Number</FormLabel>
               <Input
                  variant='flushed'
+                 value={data1}
                  borderBottom={'1px solid black'}
                 onChange={(e) => setReference(e.target.value)}
                 type="text"
