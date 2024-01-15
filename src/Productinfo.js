@@ -79,7 +79,7 @@ export default function Productinfo(props) {
   <Link to={`/Productinfo/${data1}/ReservationForm`}>
     <button
       style={{ paddingLeft: '10px' }}
-      className="bg-yellow-300 opacity-75 hover:opacity-100 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
+      className="bg-yellow-300 opacity-75 hover:opacity-100 text-yellow-900  rounded-full px-10 py-2 font-semibold"
     >
       <i className="mdi mdi-cart -ml-2 mr-2"></i> BUY NOW
     </button>
