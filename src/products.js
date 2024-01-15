@@ -73,22 +73,7 @@ export default function Products(props) {
 </Flex>
 
 
-<div style={{padding:"10px"}}>
-          <Button
-            colorScheme='facebook'
-            onClick={goToPrevPage}
-          mr={'20px'}
-            >
-           <GrLinkPrevious />PrevPage...  
-          </Button>
-          <Button
-            colorScheme='facebook'
-            onClick={goToNextPage}
-            
-          >
-            <GrLinkNext /> NextPage...
-          </Button>
-          </div>
+
         </Flex>
       </Box>
 
@@ -103,6 +88,21 @@ export default function Products(props) {
         ) : (
           <p>Loading...</p>
         )}
+        <div style={{padding:"10px"}}>
+          <Button
+            onClick={goToPrevPage}
+          mr={'20px'}
+            >
+           <GrLinkPrevious />PrevPage...  
+          </Button>
+          <Button
+          
+            onClick={goToNextPage}
+            
+          >
+            <GrLinkNext /> NextPage...
+          </Button>
+          </div>
       </Flex>
     </>
   );

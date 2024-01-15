@@ -2,8 +2,8 @@
 import { React, useState, useEffect } from "react";
 import { useParams ,Link} from "react-router-dom";
 import { Button } from "@chakra-ui/react";
-
-
+import { FaShoppingCart } from "react-icons/fa";
+import { CiShoppingCart } from "react-icons/ci";
 export default function Productinfo(props) {
   const { data1 } = useParams();
   const [jsonData, setJsonData] = useState(null);
@@ -70,14 +70,14 @@ export default function Productinfo(props) {
                 </p>
               )}                             </div>
             <div>
-              <div className="inline-block align-bottom mr-5">
+              <div style={{marginBottom:'10px'}} className="inline-block">
                 <span style={{paddingLeft:'10px'}} className="text-2xl leading-none align-baseline">MAD </span>
                 <span className="font-bold text-3xl leading-none align-baseline">{targetObject.price}</span>
                 <span className="text-2xl leading-none align-baseline"></span>
               </div>
-              <div className="inline-block align-bottom">
+              <div style={{marginBottom:'px',marginLeft:'10px'}}  className="inline-block align-bottom">
   <Link to={`/Productinfo/${data1}/ReservationForm`}>
-    <Button>buy now</Button>
+    <Button colorScheme='yellow'>buy now<CiShoppingCart fontSize={'25px'}/></Button>
   </Link>
 </div>
 
