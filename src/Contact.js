@@ -37,6 +37,7 @@ const ReservationForm = () => {
         reference,
         number,
         message,
+        data1
       });
 
       setName('');
