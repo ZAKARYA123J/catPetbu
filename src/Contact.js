@@ -31,7 +31,7 @@ const ReservationForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post('https://zakarya.onrender.com/Reservation', {
+      await axios.post('https://data1-sp44.onrender.com/Reservation', {
         name,
         email,
         reference,

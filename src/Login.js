@@ -20,7 +20,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await axios.post("https://zakarya.onrender.com/login", {
+            const result = await axios.post("https://data1-sp44.onrender.com/login", {
                 email,
                 password
             });
