@@ -15,7 +15,7 @@ const SignUp = () => {
     }
 
     try {
-      await axios.post('https://data1-sp44.onrender.com/sign', {
+      await axios.post('https://servyre4.onrender.com/sign', {
         name: name,
         email: email,
         password: password,
